@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{top=1in, bottom=1in, left=1in, right=1in}
+
+\title{Estrutura do Módulo}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\section{Exemplo de Prompt Final 1}
+
+\begin{verbatim}
+"Estou organizando um repositório GitHub que conterá documentos de estudo, imagens e códigos. 
+Gostaria que me ajudasse a definir a melhor estrutura de pastas para armazenar esses itens de maneira otimizada. 
+Além disso, preciso de orientações sobre boas práticas de commits e colaboração com outros desenvolvedores, 
+utilizando Pull Requests e Issues. Por favor, forneça um raciocínio passo a passo, explicando cada escolha que 
+devo fazer para otimizar o repositório, facilitando futuras contribuições e manutenções."
+\end{verbatim}
+
+\section{Exemplo de Prompt Final 2}
+
+\begin{verbatim}
+"Estou trabalhando em [tarefa específica], onde preciso [resultado desejado]. 
+Gostaria que você me ajudasse fornecendo um raciocínio passo a passo (Chain of Thought) 
+que explique as melhores práticas, estratégias e as decisões que devo tomar. 
+Por favor, considere [detalhes relevantes para a tarefa] e forneça uma explicação clara que me ajude 
+a entender cada escolha."
+\end{verbatim}
+
+
+\end{document}
