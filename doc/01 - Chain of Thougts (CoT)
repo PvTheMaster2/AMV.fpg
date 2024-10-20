@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{Módulo 1: Chain of Thought (CoT)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+
+\subsection{Descrição Geral}
+A técnica de \textit{Chain of Thought} (CoT) é uma abordagem que permite aos Modelos de Linguagem de Grande Porte (LLMs) simular um processo de raciocínio passo a passo. Ao incentivar o modelo a "pensar" em etapas sequenciais, podemos obter respostas mais coerentes e detalhadas, especialmente em tarefas que requerem lógica e resolução de problemas.
+
+\subsection{Objetivo}
+Este módulo visa explicar a importância da técnica CoT e como integrá-la com outras abordagens avançadas de \textit{prompt engineering} para maximizar a eficácia dos LLMs em diversas aplicações.
+
+\subsection{Imagem Sugerida}
+Um diagrama ilustrando o fluxo de pensamento de um LLM ao utilizar a técnica CoT, destacando as etapas sequenciais de raciocínio.
+
+\section{Objetivos de Aprendizagem}
+\begin{itemize}
+    \item Compreender o conceito e a importância da técnica \textit{Chain of Thought}.
+    \item Aprender a padronizar \textit{prompts} específicos para implementar o CoT.
+    \item Implementar a técnica em exemplos práticos.
+    \item Identificar casos de uso relevantes onde o CoT pode ser aplicado.
+    \item Avaliar os benefícios e limitações da técnica.
+\end{itemize}
+
+\section{Teoria e Conceitos Fundamentais}
+
+\subsection{Definição}
+\textit{Chain of Thought} é uma técnica de \textit{prompt engineering} que guia o LLM a gerar respostas detalhadas, dividindo o processo de pensamento em etapas sequenciais. Isso permite que o modelo explique seu raciocínio antes de chegar à conclusão final.
+
+\subsection{Origem e Desenvolvimento}
+Introduzida por pesquisadores do Google no artigo \textit{"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"}, a técnica surgiu da necessidade de melhorar a capacidade dos LLMs em tarefas que exigem raciocínio lógico e analítico.
+
+\subsection{Princípios Básicos}
+Ao fornecer exemplos ou instruções que incentivem o modelo a "pensar passo a passo", o LLM é capaz de simular um processo de raciocínio semelhante ao humano, melhorando a precisão e a coerência das respostas.
+
+\subsection{Imagem Sugerida}
+Um fluxograma mostrando as etapas do raciocínio dentro do CoT, desde a compreensão da pergunta até a resposta final.
+
+\section{Padronização de Prompts}
+
+\subsection{Diretrizes}
+
+\begin{itemize}
+    \item Estrutura e Formatação dos Prompts: Inicie o \textit{prompt} com a pergunta e incentive o modelo a pensar passo a passo, usando frases como "Vamos pensar passo a passo".
+    \item Linguagem Clara e Objetiva: Utilize instruções diretas e evite ambiguidades.
+    \item Instruções Específicas para a Técnica: Indique explicitamente que o modelo deve detalhar seu raciocínio antes de fornecer a resposta final.
+\end{itemize}
+
+\subsection{Exemplos de Prompts}
+
+\noindent \textbf{Prompt Base:}
+
+\begin{verbatim}
+Q: [Insira a pergunta aqui]
+A: Vamos pensar passo a passo.
+\end{verbatim}
+
+\noindent \textbf{Variações:}
+\begin{itemize}
+    \item "Explique seu raciocínio detalhadamente antes de responder."
+    \item "Descreva cada etapa que leva à solução."
+\end{itemize}
+
+\subsection{Imagem Sugerida}
+Uma comparação visual entre um \textit{prompt} padrão e um \textit{prompt} adaptado para CoT, destacando as diferenças na estrutura.
+
+\section{Exemplos Práticos}
+
+\subsection{Exemplo 1}
+
+\textbf{Descrição da Tarefa}: Resolver um problema matemático envolvendo operações básicas.
+
+\noindent \textbf{Prompt Utilizado:}
+
+\begin{verbatim}
+Q: A cafeteria tinha 23 maçãs. Se usaram 20 para o almoço e compraram mais 6, quantas maçãs eles têm agora?
+A: Vamos pensar passo a passo.
+\end{verbatim}
+
+\noindent \textbf{Resposta do LLM}:
+
+\begin{verbatim}
+A cafeteria começou com 23 maçãs. Usaram 20, sobrando 3 maçãs. Compraram mais 6, totalizando 9 maçãs. A resposta é 9.
+\end{verbatim}
+
+\subsection{Exemplo 2}
+
+\textbf{Descrição da Tarefa}: Resolver um enigma lógico.
+
+\noindent \textbf{Prompt Utilizado:}
+
+\begin{verbatim}
+Q: Se hoje é terça-feira, que dia será em 10 dias?
+A: Vamos pensar passo a passo.
+\end{verbatim}
+
+\noindent \textbf{Resposta do LLM}:
+
+\begin{verbatim}
+Existem 7 dias na semana. 10 dias a partir de terça-feira é igual a 10 mod 7 = 3 dias após completar uma semana. Terça-feira + 3 dias é sexta-feira. A resposta é sexta-feira.
+\end{verbatim}
+
+\subsection{Imagem Sugerida}
+Capturas de tela das interações mostrando o \textit{prompt} e a resposta do LLM.
+
+\section{Aplicações e Casos de Uso}
+
+\subsection{Setores Relevantes}
+\begin{itemize}
+    \item Educação: Auxílio no ensino, oferecendo explicações detalhadas de conceitos complexos.
+    \item Desenvolvimento de Software: Depuração e geração de código com explicações passo a passo.
+    \item Atendimento ao Cliente: Fornecimento de respostas detalhadas e esclarecedoras para dúvidas dos clientes.
+    \item Pesquisa e Análise de Dados: Geração de relatórios e \textit{insights} com raciocínio estruturado.
+\end{itemize}
+
+\subsection{Estudos de Caso}
+Uma empresa de software utilizou o CoT para melhorar a precisão de um assistente virtual, resultando em uma redução de 30\% nos \textit{tickets} de suporte.
+
+\subsection{Imagem Sugerida}
+Um infográfico ilustrando os diferentes setores e como o CoT é aplicado em cada um.
+
+\section{Atividades Práticas}
+
+\subsection{Atividade 1: Criação de Prompts}
+\textbf{Descrição}: Desenvolver \textit{prompts} padronizados utilizando o CoT para diferentes cenários.
+
+\textbf{Instruções}:
+\begin{enumerate}
+    \item Escolha um problema ou pergunta em um contexto específico.
+    \item Crie um \textit{prompt} que incentive o LLM a utilizar o CoT.
+    \item Teste o \textit{prompt} e ajuste conforme necessário.
+\end{enumerate}
+
+\subsection{Atividade 2: Implementação da Técnica}
+\textbf{Descrição}: Aplicar o CoT em uma tarefa real utilizando uma plataforma LLM.
+
+\textbf{Instruções}:
+\begin{enumerate}
+    \item Selecione uma tarefa que beneficie do raciocínio passo a passo.
+    \item Utilize o \textit{prompt} desenvolvido para interagir com o LLM.
+    \item Analise a resposta e avalie a eficácia.
+\end{enumerate}
+
+\subsection{Atividade 3: Análise Comparativa}
+\textbf{Descrição}: Comparar respostas geradas com e sem o uso do CoT.
+
+\textbf{Instruções}:
+\begin{enumerate}
+    \item Use o mesmo problema em ambos os cenários.
+    \item Avalie as respostas com base em critérios como clareza, precisão e coerência.
+    \item Documente as diferenças observadas.
+\end{enumerate}
+
+\subsection{Imagem Sugerida}
+Fluxogramas ilustrando o processo de cada atividade.
+
+\section{Recursos Visuais e Imagens}
+
+\subsection{Tipos de Recursos}
+\begin{itemize}
+    \item Diagramas de Fluxo: Visualizando o processo de raciocínio no CoT.
+    \item Capturas de Tela: Exemplos reais de interações com o LLM.
+    \item Infográficos: Destacando estatísticas e benefícios do CoT.
+    \item Slides Visuais: Resumindo os pontos-chave do módulo.
+\end{itemize}
+
+\section{Avaliação e Feedback}
+
+\subsection{Quiz/Questionário}
+\textbf{Formato}: Múltipla escolha e verdadeiro/falso.
+
+\textbf{Objetivo}: Testar o entendimento dos conceitos e a capacidade de aplicar o CoT.
+
+\noindent \textbf{Exemplo de Pergunta}: Verdadeiro ou Falso: A técnica CoT é eficaz apenas em tarefas matemáticas.
+
+\subsection{Projeto Final}
+\textbf{Descrição}: Desenvolver um conjunto de \textit{prompts} utilizando o CoT para um caso de uso específico.
+
+\noindent \textbf{Critérios de Avaliação}:
+\begin{itemize}
+    \item Clareza dos \textit{prompts}.
+    \item Eficácia na geração de respostas detalhadas.
+    \item Criatividade na aplicação da técnica.
+    \item Aderência às diretrizes de padronização.
+\end{itemize}
+
+\subsection{Feedback}
+\textbf{Métodos}: Revisão individual com comentários detalhados e discussões em grupo para compartilhar \textit{insights}.
+
+\textbf{Objetivo}: Ajudar os participantes a aprimorar suas habilidades em \textit{prompt engineering} utilizando o CoT.
+
+\section{Recursos Adicionais}
+
+\subsection{Leitura Recomendada}
+\begin{itemize}
+    \item Artigo original: \textit{"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"}.
+    \item Tutoriais sobre \textit{prompt engineering} avançado.
+\end{itemize}
+
+\subsection{Tutoriais em Vídeo}
+\begin{itemize}
+    \item Demonstrações práticas de como implementar o CoT.
+\end{itemize}
+
+\subsection{Ferramentas e Bibliotecas}
+\begin{itemize}
+    \item LangChain: \textit{Framework} para desenvolvimento de aplicações com LLMs.
+    \item Semantic Kernel: Ferramenta para integração semântica em aplicações de IA.
+\end{itemize}
+
+\subsection{Repositórios de Código}
+\begin{itemize}
+    \item Exemplos de implementações no GitHub relacionados ao CoT.
+\end{itemize}
+
+\section{Resumo e Conclusão}
+
+\subsection{Recapitulação}
+Neste módulo, exploramos a técnica \textit{Chain of Thought}, entendendo sua importância e aprendendo como padronizar e implementar \textit{prompts} que incentivam o raciocínio passo a passo nos LLMs.
+
+\subsection{Importância da Técnica}
+O CoT é uma ferramenta poderosa para melhorar a eficácia dos LLMs em tarefas complexas, permitindo respostas mais detalhadas e precisas, e é fundamental para avançar no uso eficaz de modelos de linguagem em diversos setores.
+
+\section{Exemplo de Prompt Final 1}
+
+\begin{verbatim}
+"Estou organizando um repositório GitHub que conterá documentos de estudo, imagens e códigos. 
+Gostaria que me ajudasse a definir a melhor estrutura de pastas para armazenar esses itens de maneira otimizada. 
+Além disso, preciso de orientações sobre boas práticas de commits e colaboração com outros desenvolvedores, 
+utilizando Pull Requests e Issues. Por favor, forneça um raciocínio passo a passo, explicando cada escolha que 
+devo fazer para otimizar o repositório, facilitando futuras contribuições e manutenções."
+\end{verbatim}
+
+\section{Exemplo de Prompt Final 2}
+
+\begin{verbatim}
+"Estou trabalhando em [tarefa específica], onde preciso [resultado desejado]. 
+Gostaria que você me ajudasse fornecendo um raciocínio passo a passo (Chain of Thought) 
+que explique as melhores práticas, estratégias e as decisões que devo tomar. 
+Por favor, considere [detalhes relevantes para a tarefa] e forneça uma explicação clara que me ajude 
+a entender cada escolha."
+\end{verbatim}
+
+
+
+\end{document}
